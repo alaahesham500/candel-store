@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us - Candle Store</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active-link">Contact</a>
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button>
+
+        <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="wishlist-icon-container">
+        <i class="fa fa-heart" id="open-wishlist"></i>
+        <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+        <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+        <span class="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="contactContainer"  data-aos="fade-up">
+    <div class="contactHeader">
+        <h1>تواصل معنا 🕯️</h1>
+        <p>نحن هنا لمساعدتك. املأ النموذج وسنعود إليك في أقرب وقت.</p>
+    </div>
+
+    <div class="contactFormContainer">
+        <!-- نموذج الاتصال -->
+        <form class="contactForm">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" placeholder="اكتب اسمك..." required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" placeholder="اكتب بريدك..." required>
+
+            <label for="message">رسالتك:</label>
+            <textarea id="message" name="message" rows="6" placeholder="اكتب رسالتك..." required></textarea>
+
+            <button type="submit" class="btn">إرسال الرسالة</button>
+        </form>
+
+        <div class="contactC">
+
+        <!-- Contact Info Card -->
+        <div class="contactInfo">
+            <h3>معلومات التواصل</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 شارع الشموع، القاهرة، مصر</p>
+            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> info@candlestore.com</p>
+        </div>
+
+        <!-- Map Card -->
+        <div class="mapCard">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123456789!2d31.234567!3d30.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847123456789%3A0xabcdef123456789!2sCandle%20Store!5e0!3m2!1sen!2seg!4v1697888888888!5m2!1sen!2seg"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footerContainer">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        mirror: false
+    });
+</script>
+</body>
+</html>

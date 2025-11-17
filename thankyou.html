@@ -1,0 +1,80 @@
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 شكراً لتسوقك | متجر الشموع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <style>
+    body {
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(180deg, #ffe9ee, #fff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #444;
+    }
+    .thankyou-container {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    max-width: 450px;
+    animation: fadeIn 1s ease-in-out;
+    }
+    .thankyou-container h1 {
+    color: #e48ca5;
+    font-family: "Pacifico", cursive;
+    font-size: 2.2em;
+    }
+    .thankyou-container p {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.7;
+    }
+    .thankyou-container .emoji {
+    font-size: 60px;
+    animation: candleGlow 2s infinite alternate;
+    }
+    .back-home {
+    display: inline-block;
+    margin-top: 25px;
+    background: linear-gradient(135deg, #e48ca5, #f5b6c4);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: "Pacifico", cursive;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .back-home:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f29db5, #ffbed1);
+    }
+    @keyframes candleGlow {
+    from { text-shadow: 0 0 5px #e48ca5, 0 0 10px #f5b6c4; }
+    to { text-shadow: 0 0 20px #ffb6c1, 0 0 40px #e48ca5; }
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+    </head>
+    <body>
+
+    <div class="thankyou-container">
+    <div class="emoji">🕯️</div>
+    <h1>شكراً لتسوقك معنا 💖</h1>
+    <p>تم استلام طلبك بنجاح، وسنقوم بالتواصل معك قريبًا لتأكيد التفاصيل.<br>نتمنى لك يوماً دافئاً مليئاً بالنور 🌸</p>
+    <a href="testt.html" class="back-home"><i class="fas fa-home"></i> العودة للصفحة الرئيسية</a>
+    </div>
+
+    </body>
+    </html>

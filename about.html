@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Candle Store</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html" class="active-link">About</a>
+        <a href="contact.html">Contact</a>
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button>
+
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="wishlist-icon-container">
+            <i class="fa fa-heart" id="open-wishlist"></i>
+            <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+            <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+    <section class="about-section" style="text-align: center; padding: 60px 20px;">
+        <h2>About Our Candle Store</h2>
+        <p style="max-width: 700px; margin: 20px auto; font-size: 18px; color: #444;">
+            مرحباً بكم في متجرنا للشموع! نحن نقدم أجود أنواع الشموع المعطرة والمصممة بعناية لتضفي أجواءً دافئة وجميلة على منزلك.
+            <br><br>
+            هدفنا هو تقديم منتجات عالية الجودة مع تجربة تسوق مريحة وسعيدة لكل عملائنا. اكتشف مجموعتنا الرائعة واستمتع بالشموع التي تصنع الفارق في كل لحظة.
+        </p>
+    </section>
+
+    <section class="team-section" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 40px 20px;">
+        <div class="card" style="width: 250px; padding: 20px; background-color: #f8d7da; border-radius: 15px; text-align: center;">
+            <img src="imge/team1..jpg" alt="Founder" style="width:100%; border-radius: 10px;">
+            <h3 style="margin: 15px 0 5px;">Alaa Hesham</h3>
+            <p>Founder & Designer</p>
+        </div>
+        <div class="card" style="width: 250px; padding: 20px; background-color: #f8d7da; border-radius: 15px; text-align: center;">
+            <img src="imge/team2 .jpg" alt="Co-Founder" style="width:100%; border-radius: 10px;">
+            <h3 style="margin: 15px 0 5px;">Alaa Hesham</h3>
+            <p>Marketing & Sales</p>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footerContainer">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Wishlist Panel -->
+<div id="wishlist-panel" class="wishlist-panel">
+    <h2>🩷 قائمة المفضلة</h2>
+    <div class="wishlist-actions">
+        <button id="clear-wishlist" class="clear-wishlist">🗑️ حذف الكل</button>
+    </div>
+    <div id="wishlist-items"></div>
+    <button id="close-wishlist" class="close-wishlist">إغلاق</button>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    mirror: false
+});
+</script>
+
+<script src="script.js"></script>
+<script>
+// Wishlist open/close
+const wishlistPanel = document.getElementById("wishlist-panel");
+const openWishlistBtn = document.getElementById("open-wishlist");
+const closeWishlistBtn = document.getElementById("close-wishlist");
+
+openWishlistBtn.addEventListener("click", () => {
+    wishlistPanel.style.display = "block";
+});
+
+closeWishlistBtn.addEventListener("click", () => {
+    wishlistPanel.style.display = "none";
+});
+</script>
+
+</body>
+</html>

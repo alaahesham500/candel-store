@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop - Candle Store</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button>
+
+        <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="wishlist-icon-container">
+            <i class="fa fa-heart" id="open-wishlist"></i>
+            <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+            <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;"></section>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;">
+<section class="shop-controls" data-aos="fade-up">
+    <section class="shop-controls" data-aos="fade-up"></section>
+    <!-- فلترة حسب النوع -->
+    <label for="filterCategory">Filter by Category:</label>
+    <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="lavender">Lavender</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="rose">Rose</option>
+        <option value="citrus">Citrus</option>
+        <option value="Chamomile Dreams">Chamomile Dreams</option>
+        <option value="Eucalyptus Breeze">Eucalyptus Breeze</option>
+    </select>
+
+    <!-- ترتيب حسب السعر -->
+    <label for="sortPrice">Sort by Price:</label>
+    <select id="sortPrice">
+        <option value="none">None</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+
+    <!-- بحث بالاسم -->
+    <input type="text" id="searchInput" placeholder="Search product...">
+    </section>
+
+</section>
+<!-- PAGE TITLE -->
+<section class="categoryDetails" data-aos="fade-up">
+    <h1>Relaxing Candles</h1>
+    <p>Relax your mind with our most aromatic scented candles for a peaceful home.</p>
+</section>
+
+<!-- PRODUCTS GRID -->
+
+
+<section class="products-grid" data-aos="fade-up">
+    <div class="product-card" data-name="Lavender Dreams" data-price="15">
+        <img src="imge/Lavender1.jpg" alt="Lavender Dreams">
+        <h3>Lavender Dreams</h3>
+            <p class="product-description">
+        شمعة عطرية بنكهة اللافندر تساعدك على الاسترخاء وتهدئة العقل. 
+        طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي.
+    </p>
+        <span class="product-price">$25</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Vanilla Serenity" data-price="18">
+        <img src="imge/Vanilla Serenity.jpg" alt="Vanilla Serenity">
+        <h3>Vanilla Serenity</h3>
+            <p class="product-description">
+        شمعة عطرية برائحة الفانيليا تمنحك إحساسًا بالهدوء والسكينة في المنزل. 
+        طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي.
+    </p>
+        <span class="product-price">$15</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Rose Bliss" data-price="20">
+        <img src="imge/Rose Bliss.jpg" alt="Rose Bliss">
+        <h3>Rose Bliss</h3>
+        <p class="product-description">
+        شمعة عطرية برائحة الورد الفاخر لتضفي أجواء رومانسية ودافئة على منزلك.  
+        طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي.
+    </p>
+        <span class="product-price">$22</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Citrus Calm" data-price="17">
+        <img src="imge/Citrus Calm.jpg" alt="Citrus Calm">
+        <h3>Citrus Calm</h3>
+            <p class="product-description">
+        شمعة برائحة الحمضيات المنعشة لتجديد الطاقة وخلق أجواء مريحة في المنزل.  
+        طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي.
+    </p>
+        <span class="product-price">$29</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+    <div class="product-card" data-name="Eucalyptus Breeze" data-price="16">
+    <img src="imge/Eucalyptus Breeze.jpg" alt="Eucalyptus Breeze">
+    <h3>Eucalyptus Breeze</h3>
+    <p>شمعة برائحة الكينا المنعشة، تساعد على الاسترخاء وتنقية الجو        طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي..</p>
+    <span class="product-price">$42</span>
+    <div class="product-buttons">
+        <button class="add-to-cart">🛒 Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+    </div>
+</div>
+
+<div class="product-card" data-name="Chamomile Dreams" data-price="14">
+    <img src="imge/Chamomile Dreams.jpg" alt="Chamomile Dreams">
+    <h3>Chamomile Dreams</h3>
+    <p>       طريقة الاستخدام: أشعل الشمعة لمدة 2-3 ساعات في مكان آمن بعيدًا عن التيار الهوائي.شمعة برائحة البابونج، مثالية للنوم الهادئ وتقليل التوتر.</p>
+    <span class="product-price">$49</span>
+    <div class="product-buttons">
+        <button class="add-to-cart">🛒 Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+    </div>
+</div>
+
+</section>
+    <!-- Back to Home Button -->
+    <a href="testt.html" id="backHomeBtn" class="back-home-btn" title="Back to Home">
+    <i class="fas fa-home"></i>
+    </a>
+
+<!-- FOOTER -->
+<footer class="footerContainer">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Wishlist Panel -->
+<div id="wishlist-panel" class="wishlist-panel">
+    <h2>🩷 قائمة المفضلة</h2>
+    <div class="wishlist-actions">
+        <button id="clear-wishlist" class="clear-wishlist">🗑️ حذف الكل</button>
+    </div>
+    <div id="wishlist-items"></div>
+    <button id="close-wishlist" class="close-wishlist">إغلاق</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, mirror: false });
+</script>
+</body>
+</html>

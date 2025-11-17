@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Candle Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <style>
+        body {
+        font-family: "Pacifico", cursive;
+        background-image: linear-gradient(to bottom right, #ffe4ea, #f8d7da);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+        .signup-container {
+        background-color: #fff;
+        padding: 40px 50px;
+        border-radius: 25px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        }
+
+        .signup-container h1 {
+        color: #e57c96;
+        margin-bottom: 25px;
+        font-size: 32px;
+        }
+
+        .signup-container input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 2px solid #f8d7da;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        font-family: sans-serif;
+        }
+
+        .signup-container input:focus {
+        border-color: #e57c96;
+        }
+
+        .signup-container button {
+        background-color: #e57c96;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        .signup-container button:hover {
+        background-color: #ff9fb8;
+        transform: scale(1.03);
+        }
+
+        .signup-container p {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+        font-family: sans-serif;
+        }
+
+        .signup-container a {
+        color: #e57c96;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .signup-container a:hover {
+        text-decoration: underline;
+        }
+
+        .back-home {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #e57c96;
+        font-size: 20px;
+        text-decoration: none;
+        }
+    </style>
+    </head>
+    <body>
+
+    <a href="testt.html" class="back-home"><i class="fas fa-home"></i> Home</a>
+
+    <div class="signup-container">
+        <h1>Create Account</h1>
+        <form id="signupForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("🎉 Account created successfully! Now you can sign in.");
+        window.location.href = "signin.html";
+        });
+    </script>
+    </body>
+    </html>

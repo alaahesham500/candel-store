@@ -1,0 +1,1852 @@
+/* ====== GENERAL ====== */
+body {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    background-color: #fdfbfb;
+    color: #444;
+    box-sizing: border-box;
+}
+/* عشان نخلي الانتقال إلى قسم Categories يكون بحركة ناعمة */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ====== HEADER ====== */
+.header {
+    background-color: #f8d7da;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    border-bottom: 3px solid #e6b7bb;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 20%;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.header-links a:hover {
+    color: #e75480;
+}
+
+.header-links .sign-in-btn {
+    background-color: #e75480; /* لون الزر */
+    border: none;
+    padding: 10px 20px;       /* حجم الزر */
+    border-radius: 50px;      /* يجعل الزر دائري الحواف */
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;    /* لو هو <a> */
+    display: inline-block;
+    transition: 0.3s;
+    font-family: "Pacifico", cursive;
+}
+
+.header-links .sign-in-btn:hover {
+    background-color: #c03966;
+    transform: scale(1.05);   /* تأثير تكبير خفيف عند التحويم */
+}
+
+/* ====== LANDING PAGE ====== */
+.landingPageContainer {
+    background: linear-gradient(180deg, #f8d7da 0%, #fdfbfb 100%);
+    color: #333;
+    border-radius: 0 0 100px 100px;
+    padding: 80px 0;
+    box-shadow: 0 8px 20px rgba(231, 84, 128, 0.15);
+}
+
+.landingPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
+    gap: 60px;
+    padding: 0 100px;
+}
+
+.textContainer {
+    flex: 1;
+}
+
+.slogan {
+    color: #c03966;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.description {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* SEARCH BAR */
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+
+.searchBar input {
+    border-radius: 50px;
+    border: 2px solid #e6b7bb;
+    height: 50px;
+    padding: 0 20px;
+    width: 70%;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.searchBar input:focus {
+    border-color: #e75480;
+    box-shadow: 0 0 10px rgba(231, 84, 128, 0.2);
+}
+
+.searchBar button {
+    background-color: #e75480;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchBar button:hover {
+    background-color: #c03966;
+}
+
+/* IMAGE CONTAINER */
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer img {
+    width: 600px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imageContainer img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(231, 84, 128, 0.35);
+}
+
+/* ====== TRENDING CARDS ====== */
+.trendingContainer {
+    background-color: #fdfbfb;
+    border-radius: 100px;
+    padding: 60px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.trendingHeader span {
+    text-transform: uppercase;
+    color: #e75480;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.trendingHeader h1 {
+    color: #c03966;
+}
+.trendingCards .card {
+    width: 260px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.trendingCards .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.trendingCards .cardInfo {
+    padding: 10px;
+    text-align: center;
+}
+
+.trendingCards h3 {
+    margin: 6px 0 4px;
+    font-size: 16px;
+}
+
+.trendingCards .genre {
+    font-size: 13px;
+    color: #555;
+}
+
+.trendingCards .add-to-cart-btn {
+    margin-top: 6px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #e75480;
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.trendingCards .add-to-cart-btn:hover {
+    background-color: #d6456e;
+    transform: translateY(-2px) scale(1.05);
+}
+.trendingCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* خليها موجودة لو الشاشة صغيرة */
+    gap: 20px; /* المسافة بين الكاردز */
+}
+
+.trendingCards .card {
+    flex: 0 1 260px; /* يحافظ على عرض الكارد ويتركه يتقلص شوي لو الشاشة ضيقة */
+}
+
+/* EFFECT ON HOVER */
+.trendingCards .cardInfo p {
+    text-align: center;       /* يجي النص في الوسط */
+    color: #e75480;           /* اللون الوردي */
+    margin: 5px 0;            
+    font-weight: 500;         /* ممكن نخلي النص شوي أسمك */
+}
+
+.trendingCards .card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(231,84,128,0.25);
+}
+
+.trendingCards .card:hover img {
+    transform: translateY(-6px) scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+.cardInfo {
+    width: 100%;
+    /* height: 200px; */
+    height: 100%;
+    background-color: #f8d7da;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;  /* للتأكد أن padding لا يخرج عن حجم الكارد */
+}
+
+
+
+.cardName h3 {
+    margin: 0;
+    color: #c03966;
+}
+
+.cardName p {
+    margin: 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.rating {
+    /* margin-top: 5px; */
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.rating .filled {
+    color: #ffc107;
+}
+
+.add-to-cart-btn {
+    background-color: #e75480;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Pacifico", cursive;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c03966;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* NEW BADGE */
+/* .trendingCard .card::before {
+    content: "NEW ✨";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: #c03966;
+    color: white;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.trendingCard .card.old::before {
+    content: none;
+} */
+
+/* ====== MOST LOVED CARDS ====== */
+
+
+/* ====== CATEGORY ====== */
+.categoryContainer {
+    margin-top: 150px;
+    background-color: #fdfbfb;
+}
+
+.categoryHeader span {
+    text-transform: uppercase;
+    color: #e75480;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.categoryHeader h1 {
+    color: #c03966;
+}
+
+.categoryCards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.categoryCards .card {
+    width: 250px;
+    background: #fff;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.categoryCards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(231,84,128,0.3);
+}
+
+.categoryCards .cardImg img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.categoryCards .genre {
+    color: #fff;
+    background-color: #e75480;
+    padding: 12px 0;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+    /* ====== UPDATED CATEGORY SECTION ====== */
+    .categoryContainer {
+    background: linear-gradient(180deg, #fdfbfb 0%, #ffe6ec 100%);
+    padding: 80px 0;
+    border-radius: 100px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(231,84,128,0.1);
+    }
+
+    .categoryHeader span {
+    text-transform: uppercase;
+    color: #e75480;
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+
+    .categoryHeader h1 {
+    color: #c03966;
+    margin-bottom: 40px;
+    }
+
+    .categoryCards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    }
+
+    .category-card {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .category-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(231,84,128,0.25);
+    }
+
+    .category-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .category-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    }
+
+    .category-card .cardInfo {
+    padding: 20px;
+    }
+
+    .category-card h3 {
+    color: #c03966;
+    font-size: 22px;
+    margin-bottom: 10px;
+    }
+
+    .category-card p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+    }
+
+    .category-card .btn {
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .category-card .btn:hover {
+    background-color: #c03966;
+    transform: scale(1.05);
+    }
+/* ====== FOOTER ====== */
+.footerContainer {
+    background-color: #f8d7da;
+    border-radius: 80px 80px 0 0;
+    text-align: center;
+    padding: 40px;
+    color: #555;
+    margin-top: 120px;
+    border-top: 3px solid #e6b7bb;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInFooter 1.5s ease-out forwards;
+}
+
+@keyframes fadeInFooter {
+    to { opacity:1; transform: translateY(0); }
+}
+
+.social-icons a {
+    color: #e75480;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c03966;
+    transform: scale(1.2);
+}
+
+/* ====== BACK TO TOP ====== */
+.backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e75480;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.backToTop.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.backToTop:hover {
+    background-color: #c03966;
+    transform: scale(1.1);
+}
+
+/* ====== RESPONSIVENESS ====== */
+@media (max-width: 1024px) {
+    .header { padding: 15px 50px; }
+    .landingPage { flex-direction: column; padding: 0 50px; text-align: center; }
+    .textContainer, .imageContainer { width: 100%; }
+    .slogan { font-size: 45px; }
+    .imageContainer img { width: 100%; max-width: 500px; }
+    .searchBar { flex-direction: column; }
+    .searchBar input { width: 90%; margin-bottom: 15px; }
+    .searchBar button { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+    .header { padding: 15px 20px; flex-wrap: wrap; }
+    .header-links { gap: 15px; margin-top: 10px; }
+    .trendingContainer, .mostContainer, .categoryContainer, .footerContainer { margin-top: 80px; padding: 40px 20px; }
+    .trendingCard .card, .mostCards .card, .categoryCards .card { width: 90%; max-width: 400px; }
+}
+/* ====== ANIMATE ON SCROLL ====== */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== HOVER SUBTLE EFFECTS FOR IMAGES ====== */
+.trendingCard img, .mostCards img, .categoryCards img, .imageContainer img {
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+.trendingCard img:hover, .mostCards img:hover, .categoryCards img:hover, .imageContainer img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 12px 25px rgba(231,84,128,0.35);
+}
+
+/* ====== HOVER SUBTLE EFFECTS FOR BUTTONS ====== */
+.add-to-cart-btn, .btn, .sign-in-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover, .btn:hover, .sign-in-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(231,84,128,0.3);
+}
+
+/* ====== BACK TO TOP HOVER EFFECT ====== */
+.backToTop:hover {
+    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 8px 20px rgba(231,84,128,0.4);
+}
+
+/* ====== ADD SUBTLE ANIMATION TO HEADER LINKS ====== */
+.header-links a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* ====== ADD SUBTLE ANIMATION TO TRENDING AND MOST CARDS ====== */
+.trendingCard .card, .mostCards .card, .categoryCards .card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.trendingCard .card:hover, .mostCards .card:hover, .categoryCards .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(231,84,128,0.3);
+    filter: brightness(1.05);
+}
+    /* ====== CATEGORY DETAILS PAGE ====== */
+.categoryContainer {
+    background: linear-gradient(180deg, #fdfbfb 0%, #ffe6ec 100%);
+    padding: 60px 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.categoryHeader span {
+    text-transform: uppercase;
+    color: #e75480;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.categoryHeader h1 {
+    color: #c03966;
+    margin-bottom: 30px;
+}
+
+.categoryCards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 280px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(231,84,128,0.25);
+}
+
+.category-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* يحافظ على نسبة 4:3 للكارت */
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    display: block;
+}
+
+
+.cardInfo {
+    padding: 15px;
+}
+
+.cardInfo h3 {
+    color: #c03966;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cardInfo p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #c03966;
+    transform: scale(1.05);
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e75480;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 15px;
+    z-index: 10;
+}
+    /* ===== BACK TO HOME BUTTON ===== */
+    .back-home-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffb6c1;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+    }
+
+    .back-home-btn:hover {
+    background: #ff89a0;
+    transform: translateY(-4px) scale(1.1);
+    }
+
+    .back-home-btn i {
+    transition: transform 0.3s ease;
+    }
+
+    .back-home-btn:hover i {
+    transform: rotate(-10deg);
+    }
+    /* ===================== TESTIMONIALS ===================== */
+.testimonials {
+    background-color: #fff0f3; /* خلفية ناعمة */
+    padding: 50px 20px;       /* أقل مساحة من قبل */
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 80px;
+    box-shadow: 0 6px 20px rgba(231, 84, 128, 0.1);
+}
+
+.testimonials h2 {
+    color: #c03966;
+    font-size: 28px; /* أصغر شوي */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: #fff;
+    border-radius: 25px; /* مستدير أكثر */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px 15px;  /* أصغر padding */
+    width: 260px;        /* أصغر عرض */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(231, 84, 128, 0.2);
+}
+
+.testimonial p {
+    font-size: 15px;    /* أصغر شوي */
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    color: #e75480;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 16px;   /* أصغر شوي */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial {
+        width: 90%;
+    }
+}
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial {
+        width: 90%;
+    }
+    }
+/* ===== Newsletter Compact ===== */
+.newsletter-compact {
+    background-color: #f8d7da;
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(231, 84, 128, 0.15);
+}
+
+.newsletter-compact h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 1.6rem;
+    color: #c03966;
+    margin-bottom: 15px;
+}
+
+.newsletter-compact form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-compact input[type="email"] {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #f5b5ba;
+    width: 200px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.newsletter-compact button {
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.newsletter-compact button:hover {
+    background-color: #c03966;
+    transform: scale(1.05);
+}
+/* Float Animation */
+@keyframes floatBubble {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.newsletter-compact {
+    background-color: #f8d7da;
+    padding: 20px ;
+    max-width: 500px;
+    margin: 110px auto;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(231, 84, 128, 0.15);
+    animation: floatBubble 3s ease-in-out infinite;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-compact {
+        width: 90%;
+        padding: 30px 15px;
+    }
+    .newsletter-compact input[type="email"] {
+        width: 60%;
+    }
+}
+
+    /* زر التبديل */
+    .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #444;
+    transition: color 0.3s, transform 0.2s;
+    }
+
+    .theme-toggle:hover {
+    transform: scale(1.1);
+    color: #e48ca5;
+    }
+
+    /* الوضع الداكن */
+    body.dark-mode {
+    background-color: #2c2c2c;
+    color: #fdfbfb;
+    }
+
+    body.dark-mode .header {
+    background-color: #444;
+    color: #fff;
+    }
+
+    body.dark-mode a {
+    color: #fdfbfb;
+    }
+
+    body.dark-mode .card {
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    }
+
+    body.dark-mode .footerContainer {
+    background-color: #444;
+    color: #fff;
+    }
+
+
+
+
+    /* نافذة المفضلة */
+    .wishlist-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    }
+    .wishlist-panel.active {
+    right: 0;
+    }
+    .open-wishlist {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .wishlist-icon {
+    font-size: 22px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+    }
+    .wishlist-icon.active {
+    color: #e91e63;
+    }
+    #wishlist-items img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+    }
+    #wishlist-items div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    }
+    #wishlist-panel button {
+    width: 100%;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+
+        /* ---------------- Wishlist Style ---------------- */
+    .wishlist-icon-container {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+    }
+
+    .wishlist-icon-container i {
+    font-size: 20px;
+    color: #ff4d6d;
+    transition: 0.3s;
+    }
+
+    .wishlist-icon-container:hover i {
+    transform: scale(1.1);
+    }
+
+    .wishlist-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4d6d;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    }
+
+    .wishlist-icon {
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 8px;
+    }
+
+    .wishlist-icon.active {
+    color: #ff4d6d;
+    transform: scale(1.2);
+    }
+
+    /* Panel Style */
+    .wishlist-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: right 0.4s ease;
+    overflow-y: auto;
+    z-index: 1000;
+    }
+
+    .wishlist-panel.open {
+    right: 0;
+    }
+
+    .wishlist-panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff4d6d;
+    }
+
+    #wishlist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+
+    .wishlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    }
+
+    .wishlist-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    }
+
+    .wishlist-item button {
+    background: #ff4d6d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    .wishlist-item button:hover {
+    background: #e63e5c;
+    }
+    /* زر حذف الكل */
+    .clear-wishlist {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .clear-wishlist:hover {
+    background: #e63e5c;
+    }
+
+    /* زر الشراء من المفضلة */
+    .wishlist-item .add-to-cart-small {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 5px;
+    }
+
+    .wishlist-item .add-to-cart-small:hover {
+    background: #218838;
+    }
+
+    /* ===== Toast Notification (ملوّن حسب الحالة) ===== */
+    .toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* يظهر التوست */
+    .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    /* ألوان الحالات */
+    .toast.success {
+    background: linear-gradient(135deg, #4CAF50, #45A049); /* أخضر */
+    }
+
+    .toast.favorite {
+    background: linear-gradient(135deg, #ff69b4, #ff85a2); /* وردي */
+    }
+
+    .toast.error {
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* أحمر */
+    }
+
+/* 🔔 Toast Notification Style (بأنيميشن ناعم) */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 10000;
+}
+
+/* عند الظهور */
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* أنواع الألوان */
+.toast.success {
+    background-color: #4caf50; /* أخضر */
+}
+
+.toast.favorite {
+    background-color: #e91e63; /* وردي */
+}
+
+.toast.error {
+    background-color: #f44336; /* أحمر */
+}
+
+/* ✨ تأثير التلاشي عند الاختفاء */
+.toast.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+/* ❤️ زر المفضلة فوق صورة المنتج */
+.card {
+    position: relative; /* علشان القلب يتموضع داخله */
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.wishlist-btn:hover {
+    background: rgba(255, 105, 180, 0.9);
+    transform: scale(1.1);
+}
+
+.wishlist-btn .wishlist-icon {
+    color: #777;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* لما المنتج يبقى مضاف للمفضلة */
+.wishlist-btn .wishlist-icon.active {
+    color: #e91e63; /* وردي */
+}
+    /* ==== أزرار السلة والمفضلة جنب بعض ==== */
+    .product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    }
+
+    .add-to-cart-btn,
+    .add-to-wishlist-btn {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+    .add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    }
+
+    .add-to-cart-btn:hover {
+    background-color: #0056b3;
+    }
+
+    .add-to-wishlist-btn {
+    background-color:#d48ca6;
+    color: white;
+    border: none;
+    }
+
+    .add-to-wishlist-btn:hover {
+    background-color: #c2185b;
+    }
+/* ==== Product Footer (Price + Buttons) ==== */
+.product-footer {
+    display: flex;
+    flex-direction: column; /* السعر فوق الأزرار */
+    align-items: center;
+    margin-bottom: 5px;
+    /* margin-top: 15px; */
+    /* gap: 7px;  */
+}
+
+/* السعر في سطر منفصل */
+.price {
+    color: #c2185b; /* نفس لون النصوص داخل الكارد */
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    text-align: center;
+    /* padding: 5px 5px; */
+}
+
+/* ==== Product Buttons ==== */
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    /* gap: 12px; */
+}
+
+
+/* زر السلة */
+.add-to-cart-btn {
+    flex: 1;
+    background: #c2185b;
+    color: white;
+    border: none;
+    /* padding: 12px 20px; */
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    background-color: #a31656;
+    box-shadow: 0 6px 20px rgba(194, 24, 91, 0.4);
+    transform: translateY(-2px);
+}
+
+/* زر المفضلة */
+.wishlist-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fd98b8;
+    font-size: 1.4rem;
+    transition: all 0.35s ease;
+    margin-right: 5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.wishlist-icon:hover {
+    color: #e91e63;
+    transform: scale(1.15);
+}
+
+.wishlist-icon.active i {
+    color: #c2185b;
+    animation: pulse 0.35s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+
+    /* عند التفعيل (القلب المضاف) */
+    .wishlist-icon.active i {
+    color:#c2185b; /* بينك غامق راقي */
+    animation: pulse 0.3s ease;
+    }
+
+    /* نبضة خفيفة عند الإضافة */
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+    }
+
+/* ====== CONTACT PAGE ====== */
+.contactContainer {
+    width: 85%;
+    /* max-width: 1200px; */
+    margin: 50px auto;
+    padding: 0 20px;
+    background-color: #fdfbfb; /* نفس خلفية الموقع */
+}
+
+.contactHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactHeader h1 {
+    font-size: 40px;
+    color: #f06292; /* اللون الوردي الرئيسي */
+}
+
+.contactHeader p {
+    font-size: 18px;
+    color: #444; /* لون النصوص الأساسي */
+}
+
+/* حاوية النموذج + المعلومات */
+.contactFormContainer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    gap: 20px;
+}
+
+/* نموذج الاتصال */
+.contactForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff; /* أبيض نقي لتباين مع الوردي */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(240, 98, 146, 0.2); /* ظل وردي فاتح */
+    border: 1px solid #f8d7da; /* حدود خفيفة بالوردي */
+}
+
+.contactForm label {
+    font-weight: bold;
+    color: #444;
+}
+
+.contactForm input,
+.contactForm textarea {
+    padding: 12px;
+    border: 1px solid #f8d7da; /* وردي فاتح */
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-color: #f06292; /* وردي أقوى عند التركيز */
+    outline: none;
+    box-shadow: 0 0 5px rgba(240, 98, 146, 0.3);
+}
+
+.contactForm button {
+    padding: 15px;
+    border: none;
+    background-color: #f06292; /* وردي رئيسي */
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+    background-color: #d45081; /* وردي غامق عند hover */
+}
+.contactC{
+    width: 50%;
+    height: auto;
+}
+/* Contact Info Card */
+.contactInfo {
+    width: 90%;
+    /* max-width: 500px;  */
+    height: auto;
+    background-color: #fff0f4; /* وردي فاتح */
+    padding: 15px 0px 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(240, 98, 146, 0.15);
+    border: 1px solid #f8d7da;
+    margin: 0 auto; /* لتوسيط الكارد */
+}
+
+/* Map under the card */
+.mapCard {
+    width: 95%;
+    /* max-width: 500px;  */
+    height: 295px;
+    margin: 10px 0 0 15px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(240, 98, 146, 0.15);
+}
+
+.mapCard iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .contactInfo, .mapUnderCard {
+        max-width: 90%;
+    }
+}
+
+/* ====== ABOUT PAGE ====== */
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff0f3; /* لون خلفية فاتح وردي */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(158, 31, 84, 0.1);
+    text-align: center;
+}
+
+.about-section h1 {
+    color: #f08ca0; /* نفس درجة الوردي اللي بالموقع */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #f06292;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        margin: 30px 20px;
+        padding: 15px;
+    }
+
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* ===== RELAXING PRODUCTS PAGE ===== */
+
+/* الصفحة العامة */
+body {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    background-color: #fdfbfb;
+    color: #444;
+    box-sizing: border-box;
+}
+
+/* العنوان والوصف */
+.categoryDetails {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.categoryDetails h1 {
+    color: #c03966;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.categoryDetails p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 40px 80px;
+}
+
+/* كل كارت منتج */
+.product-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* صورة المنتج */
+.product-card img {
+width: 100%; 
+height: 180px; 
+object-fit: cover; 
+transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.product-card:hover img {
+transform: translateY(-6px) scale(1.05);
+filter: brightness(1.1);
+}
+
+/* النص */
+.product-card h3 {
+margin: 0; 
+color: #c03966;
+}
+
+.product-card p {
+margin: 0; 
+color: gray; 
+font-size: 14px;
+}
+
+/* الأزرار */
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0 20px;
+}
+
+/* زر السلة */
+.add-to-cart {
+    background-color: #e75480;
+    border: none; 
+    padding: 10px 15px;
+    border-radius: 20px; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 15px; 
+    font-family: "Pacifico", cursive; 
+    transition: 0.3s; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+background-color: #c03966; 
+transform: translateY(-2px) scale(1.05);
+}
+
+/* زر المفضلة */
+.add-to-wishlist {
+    background: none;
+    border: 1px solid #e75480;
+    color: #e75480;
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-to-wishlist:hover {
+    background-color: #e75480;
+    color: #fff;
+}
+    /* ==== Glow effect when navigating to categories ==== */
+    #categories.glow {
+    box-shadow: 0 0 25px 5px rgba(255, 182, 193, 0.8); /* توهج بينك لطيف */
+    transition: box-shadow 0.8s ease-in-out;
+    }
+
+    body {
+    font-family: "Pacifico", cursive;
+    background-color: #fdfbfb;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8d7da;
+}
+
+.header .header-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #444;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-buttons button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-to-cart { background-color: #e57c96; color: #fff; }
+.add-to-cart:hover { background-color: #ff9fb8; }
+
+.add-to-wishlist { background-color: #fff; border: 1px solid #e57c96; color: #e57c96; }
+.add-to-wishlist:hover { background-color: #e57c96; color: #fff; }
+
+/* ===== Shop Controls Styling ===== */
+
+    .shop-controls label {
+    font-weight: bold;
+    color: #e57c96;
+    }
+
+    .shop-controls select,
+    .shop-controls input {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #f8d7da;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s;
+    }
+
+    .shop-controls select:hover,
+    .shop-controls input:hover,
+    .shop-controls select:focus,
+    .shop-controls input:focus {
+    border-color: #e57c96;
+    box-shadow: 0 2px 6px rgba(229,124,150,0.3);
+    }
+
+/* ===== Products Grid ===== */
+    .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* كل صف فيه 3 كروت حسب المساحة */
+    gap: 40px; /* المسافة بين الكروت */
+    justify-content: center; /* توسيطهم أفقياً */
+    align-items: center; /* توسيط عمودياً */
+    max-width: 1000px; /* تحديد عرض الشبكة */
+    margin: 0 auto; /* توسيط الشبكة بالكامل في نص الصفحة */
+    padding: 60px 20px;
+    }
+
+    .product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 260px; /* حجم موحد للكارت */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(229,124,150,0.3);
+    }
+
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+    .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e57c96; /* بينك واضح */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-shadow: 0 0 4px rgba(229, 124, 150, 0.3); /* توهج خفيف */
+    }
+
+
+/* لجعل الشبكة متجاوبة على الشاشات الصغيرة */
+@media screen and (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 كروت في السطر */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 كارت في السطر */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* كارت واحد في السطر */
+    }
+}
+    /* زر المفضلة بدون خلفية */
+    .add-to-wishlist {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size:30 px;
+    color: #999; /* لون افتراضي رمادي */
+    transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* لما يضغط المستخدم وتتحول لمفضلة */
+    .add-to-wishlist.active {
+    color: #d63384; /* بينك غامق */
+    transform: scale(1.2);
+    }

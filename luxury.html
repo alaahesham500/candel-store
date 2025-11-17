@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop - Candle Store</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button>
+
+        <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="wishlist-icon-container">
+            <i class="fa fa-heart" id="open-wishlist"></i>
+            <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+            <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;"></section>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;">
+<section class="shop-controls" data-aos="fade-up">
+    <section class="shop-controls" data-aos="fade-up"></section>
+    <!-- فلترة حسب النوع -->
+    <label for="filterCategory">Filter by Category:</label>
+    <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="amber">Amber</option>
+        <option value="oud">Oud</option>
+        <option value="musk">Musk</option>
+        <option value="jasmine">Jasmine</option>
+    </select>
+
+    <!-- ترتيب حسب السعر -->
+    <label for="sortPrice">Sort by Price:</label>
+    <select id="sortPrice">
+        <option value="none">None</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+
+    <!-- بحث بالاسم -->
+    <input type="text" id="searchInput" placeholder="Search product...">
+    </section>
+
+</section>
+<!-- PAGE TITLE -->
+<section class="categoryDetails" data-aos="fade-up">
+    <h1>Luxury Collection</h1>
+    <p>Elegance and fine aromas in one.</p>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="products-grid" data-aos="fade-up">
+    <div class="product-card" data-name="Royal Amber" data-price="55">
+        <img src="imge/333.jpeg" alt="Royal Amber Candle">
+        <h3>Royal Amber</h3>
+        <p class="product-description">
+            شمعة فاخرة برائحة العنبر الدافئة، تضيف لمسة ملكية لأي مكان. 
+            مصنوعة من شمع الصويا الطبيعي مع فتيل قطني ناعم.
+        </p>
+        <span class="product-price">$55</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Velvet Oud" data-price="62">
+        <img src="imge/3.jpeg" alt="Velvet Oud Candle">
+        <h3>Velvet Oud</h3>
+        <p class="product-description">
+            مزيج فاخر من العود والمسك الأبيض يمنح منزلك رائحة شرقية راقية تدوم طويلاً.
+        </p>
+        <span class="product-price">$62</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Golden Musk" data-price="48">
+        <img src="imge/22.jpeg" alt="Golden Musk Candle">
+        <h3>Golden Musk</h3>
+        <p class="product-description">
+            شمعة راقية تجمع بين اللمسة الذهبية ورائحة المسك الفاخر لتعزز الأناقة في كل زاوية.
+        </p>
+        <span class="product-price">$48</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Jasmine Luxe" data-price="50">
+        <img src="imge/2.jpeg" alt="Jasmine Luxe Candle">
+        <h3>Jasmine Luxe</h3>
+        <p class="product-description">
+            شمعة برائحة الياسمين الفاخر، تمنحك أجواء من الفخامة والهدوء. مثالية لغرف المعيشة وغرف النوم.
+        </p>
+        <span class="product-price">$50</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Oud Majestic" data-price="55">
+        <img src="imge/11.jpeg" alt="Oud Majestic">
+        <h3>Oud Majestic</h3>
+        <p class="product-description">
+        شمعة بروائح العود الشرقي الفاخر ممزوجة بالزهور البيضاء.  
+        مثالية لأمسيات راقية وأجواء هادئة.  
+        </p>
+        <span class="product-price">$55</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Amber Royale" data-price="45">
+        <img src="imge/1.jpeg" alt="Amber Royale">
+        <h3>Amber Royale</h3>
+        <p class="product-description">
+        شمعة فاخرة برائحة العنبر والمسك الأبيض، تضيف جوًا من الفخامة والدفء للمكان.  
+        </p>
+        <span class="product-price">$45</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+</section>
+    <!-- Back to Home Button -->
+    <a href="testt.html" id="backHomeBtn" class="back-home-btn" title="Back to Home">
+    <i class="fas fa-home"></i>
+    </a>
+
+<!-- FOOTER -->
+<footer class="footerContainer">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Wishlist Panel -->
+<div id="wishlist-panel" class="wishlist-panel">
+    <h2>🩷 قائمة المفضلة</h2>
+    <div class="wishlist-actions">
+        <button id="clear-wishlist" class="clear-wishlist">🗑️ حذف الكل</button>
+    </div>
+    <div id="wishlist-items"></div>
+    <button id="close-wishlist" class="close-wishlist">إغلاق</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, mirror: false });
+</script>
+</body>
+</html>

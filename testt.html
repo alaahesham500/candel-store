@@ -1,0 +1,372 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candle Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- HEADER -->
+    <header class="header" data-aos="fade-down">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button> 
+
+        <div class="wishlist-icon-container">
+        <i class="fa fa-heart" id="open-wishlist"></i>
+        <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+        <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+        <span class="cart-count">0</span>
+        </div>
+    </nav>
+    </header>
+
+    <!-- LANDING PAGE -->
+    <section class="landingPageContainer" data-aos="fade-in">
+    <div class="landingPage">
+        <div class="textContainer" data-aos="fade-right">
+        <p class="welcome">Welcome to</p>
+        <h1 class="slogan">Candle Store</h1>
+        <p class="description">Discover hand-crafted candles that light up your mood and your space.</p>
+        <div class="searchBar">
+            <input type="text" placeholder="Search your favorite candle..." />
+            <button type="button" class="btn searchBtn">Search</button>
+        </div>
+        </div>
+        <div class="imageContainer" data-aos="fade-left">
+        <img src="imge/imgebanner-candles.jpg.png" alt="Candle Showcase">
+        </div>
+    </div>
+    </section> 
+
+    <!-- TRENDING SECTION -->
+    <section class="trendingContainer" data-aos="fade-up">
+    <div class="trendingHeader">
+        <span>Popular Now</span>
+        <h1>Trending Candles</h1>
+    </div>
+
+    <div class="trendingCards">
+
+        <!-- CARD 1 -->
+        <div class="card" data-aos="fade-up" data-id="1" data-name="Rose Quartz" data-price="50" data-image="imge/trending1.jpg.png">
+        <img src="imge/trending1.jpg.png" alt="Rose Quartz">
+        <div class="cardInfo">
+            <p class="genre">Soft floral scent</p>
+            <h3>Rose Quartz</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$50</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="Rose Quartz" data-price="50">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card" data-aos="fade-up" data-id="2" data-name="White Serenity" data-price="75" data-image="imge/trending2.jpg.png">
+        <img src="imge/trending2.jpg.png" alt="White Serenity">
+        <div class="cardInfo">
+            <p class="genre">Fresh cotton & musk</p>
+            <h3>White Serenity</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$75</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="White Serenity" data-price="75">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card" data-aos="fade-up" data-id="3" data-name="Blush Bloom" data-price="120" data-image="imge/trending3.jpg.png">
+        <img src="imge/trending3.jpg.png" alt="Blush Bloom">
+        <div class="cardInfo">
+            <p class="genre">Vanilla & pink peony</p>
+            <h3>Blush Bloom</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$120</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="Blush Bloom" data-price="120">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+<!-- MOST LOVED SECTION (Compact & Enhanced) -->
+    <section class="trendingContainer" data-aos="fade-up">
+    <div class="trendingHeader">
+        <span>Popular</span>
+        <h1>Most Loved Candles</h1>
+    </div>
+
+    <div class="trendingCards">
+
+        <!-- CARD 1 -->
+        <div class="card" data-aos="fade-up" data-id="1" data-name="Rose Quartz" data-price="50" data-image="imge/trending1.jpg.png">
+        <img src="imge/mntdataimgecandle3.jpg.jpg" alt="Romantic Glow">
+        <div class="cardInfo">
+            <p class="genre">Rose Aroma</p>
+            <h3>Romantic Glow</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$40</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="Rose Quartz" data-price="40">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card" data-aos="fade-up" data-id="2" data-name="White Serenity" data-price="75" data-image="imge/trending2.jpg.png">
+        <img src="imge/candle5.webp" alt="White Serenity">
+        <div class="cardInfo">
+            <p class="genre">Rose Aroma</p>
+            <h3>Romantic Glow</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$65</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="White Serenity" data-price="65">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card" data-aos="fade-up" data-id="3" data-name="Blush Bloom" data-price="120" data-image="imge/trending3.jpg.png">
+        <img src="imge/candle4.jpg" alt="Blush Bloom">
+        <div class="cardInfo">
+            <p class="genre">Ocean Freshy</p>
+            <h3>Blue Calm</h3>
+            <div class="rating">
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            <i class="fas fa-star filled"></i>
+            </div>
+
+            <div class="product-footer">
+            <div class="price">$85</div>
+            <div class="product-buttons">
+                <button class="add-to-cart-btn" data-name="Blush Bloom" data-price="85">🛒 Add to Cart</button>
+                <button class="wishlist-icon"><i class="fa fa-heart"></i></button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+<!-- CATEGORY SECTION UPDATED -->
+<section id="categories" data-aos="fade-up">
+    <!-- محتوى الكاتيجوريز -->
+    <section id="categories" class="categoryContainer" data-aos="fade-up">
+        <div class="categoryHeader">
+            <span>Categories</span>
+            <h1>Candle Types</h1>
+        </div>
+
+        <div class="categoryCards">
+            <div class="category-card" data-aos="zoom-in">
+                <div class="badge">NEW</div>
+                <img src="imge/category1.jpg" alt="Scented Candles">
+                <div class="cardInfo">
+                    <h3>Scented Candles</h3>
+                    <p>Relaxing fragrances for your home.</p>
+                    <a href="scented.html" class="btn">details</a>
+                </div>
+            </div>
+
+            <div class="category-card" data-aos="zoom-in">
+                <div class="badge">HOT</div>
+                <img src="imge/category2.jpg" alt="Decorative Candles">
+                <div class="cardInfo">
+                    <h3>Decorative Candles</h3>
+                    <p>Add a touch of style to any space.</p>
+                    <a href="decorative.html" class="btn">details</a>
+                </div>
+            </div>
+
+            <div class="category-card" data-aos="zoom-in">
+                <img src="imge/category-last.jpg" alt="Luxury Candles">
+                <div class="cardInfo">
+                    <h3>Luxury Collection</h3>
+                    <p>Elegance and fine aromas in one.</p>
+                    <a href="luxury.html" class="btn">details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+    <!-- TESTIMONIALS SECTION -->
+<section class="testimonials" data-aos="fade-up">
+    <h2>What Our Customers Say 💬</h2>
+    <div class="testimonial-cards">
+        <div class="testimonial">
+            <p>“The scent lasts for hours! Absolutely love it 💕.”</p>
+            <h4>- Sarah M.</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>“Elegant design and relaxing aroma — perfect gift idea!”</p>
+            <h4>- Lina K.</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>“I never expected a candle to look this classy and smell this divine!”</p>
+            <h4>- Nour A.</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Compact -->
+<section class="newsletter-compact" id="newsletter">
+    <h2>اشترك معنا</h2>
+    <form class="newsletter-form">
+        <input type="email" placeholder="اكتب بريدك الإلكتروني..." required>
+        <button type="submit">اشترك الآن</button>
+    </form>
+</section>
+
+    <!-- نافذة المفضلة -->
+    <div id="wishlist-panel" class="wishlist-panel">
+    <h2>🩷 قائمة المفضلة</h2>
+
+    <div class="wishlist-actions">
+        <button id="clear-wishlist" class="clear-wishlist">🗑️ حذف الكل</button>
+    </div>
+
+    <div id="wishlist-items"></div>
+
+    <button id="close-wishlist" class="close-wishlist">إغلاق</button>
+    </div>
+
+
+<!-- FOOTER -->
+<footer class="footerContainer" data-aos="fade-up">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTopBtn" class="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        mirror: false
+    });
+</script>
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        mirror: false
+    });
+</script>
+</body>
+</html>
+<script>
+    window.addEventListener('load', function() {
+        // لو الصفحة اتفتحت وفيها الهاش #categories
+        if (window.location.hash === '#categories') {
+        const section = document.querySelector('#categories');
+        if (section) {
+            section.classList.add('glow');
+            setTimeout(() => {
+            section.classList.remove('glow');
+            }, 1500); // يختفي التوهج بعد ثانية ونص
+        }
+        }
+    });
+    </script>
+
+</body>

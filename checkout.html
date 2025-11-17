@@ -1,0 +1,247 @@
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💳 الدفع | متجر الشموع</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+    body {
+    font-family: "Cairo", sans-serif;
+    background-image: linear-gradient(to bottom right, #fff0f5, #ffe4ea);
+    margin: 0;
+    padding: 0;
+    }
+
+    .checkout-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 40px;
+    animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    color: #e48ca5;
+    grid-column: span 2;
+    }
+
+    .form-group {
+    margin-bottom: 15px;
+    }
+
+    label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 600;
+    }
+
+    input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #f8d7da;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+    border-color: #e48ca5;
+    box-shadow: 0 0 5px #f9c9d5;
+    }
+
+    button {
+    background: linear-gradient(135deg, #e48ca5, #f5b6c4);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-family: "Pacifico", cursive;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+    }
+
+    button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f29db5, #ffbed1);
+    }
+
+    button:active {
+    transform: scale(0.97);
+    background: linear-gradient(135deg, #d96d8c, #f29db5);
+    }
+
+    .order-summary {
+    background-color: #fff5f8;
+    border-radius: 15px;
+    border: 1px solid #ffd6e0;
+    padding: 20px;
+    height: fit-content;
+    }
+
+    .order-summary h2 {
+    color: #e48ca5;
+    margin-bottom: 15px;
+    text-align: center;
+    }
+
+    .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    }
+
+    .total {
+    border-top: 1px solid #ffd6e0;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #333;
+    }
+
+    .back-home {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #e48ca5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .back-home:hover {
+    color: #d96d8c;
+    }
+
+    #cardDetails {
+    display: none;
+    animation: fadeIn 0.5s;
+    }
+    </style>
+    </head>
+    <body>
+
+    <div class="checkout-container">
+    <h1>🕯️ صفحة الدفع</h1>
+
+    <!-- 🧾 نموذج الدفع -->
+    <form id="checkoutForm">
+        <div class="form-group">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+        <label for="address">العنوان:</label>
+        <input type="text" id="address" required>
+        </div>
+
+        <div class="form-group">
+        <label for="city">المدينة:</label>
+        <input type="text" id="city" required>
+        </div>
+
+        <div class="form-group">
+        <label for="payment">طريقة الدفع:</label>
+        <select id="payment" required>
+            <option value="">اختر طريقة الدفع</option>
+            <option value="cash">الدفع عند الاستلام</option>
+            <option value="card">بطاقة ائتمان 💳</option>
+        </select>
+        </div>
+
+        <div id="cardDetails">
+        <div class="form-group">
+            <label for="cardNumber">رقم البطاقة:</label>
+            <input type="text" id="cardNumber" maxlength="16" placeholder="#### #### #### ####">
+        </div>
+        <div class="form-group">
+            <label for="expiry">تاريخ الانتهاء:</label>
+            <input type="month" id="expiry">
+        </div>
+        <div class="form-group">
+            <label for="cvv">رمز الأمان CVV:</label>
+            <input type="text" id="cvv" maxlength="3" placeholder="123">
+        </div>
+        </div>
+
+        <div class="form-group">
+        <label for="note">ملاحظات إضافية:</label>
+        <textarea id="note" rows="3" placeholder="مثلاً: أرجو التغليف كهدية 🎁"></textarea>
+        </div>
+
+        <button type="submit">تأكيد الطلب 💖</button>
+        <a href="cart.html" class="back-home">← الرجوع إلى السلة</a>
+    </form>
+
+    <!-- 💰 ملخص الطلب -->
+    <div class="order-summary" id="orderSummary">
+        <h2>ملخص الطلب</h2>
+        <div id="summaryItems"></div>
+        <div class="total" id="summaryTotal">الإجمالي: $0</div>
+    </div>
+    </div>
+
+    <script>
+    // 🌸 عرض تفاصيل البطاقة فقط عند اختيار الدفع بالبطاقة
+    document.getElementById("payment").addEventListener("change", function(){
+    const cardSection = document.getElementById("cardDetails");
+    cardSection.style.display = (this.value === "card") ? "block" : "none";
+    });
+
+    // 🛍️ تحميل بيانات السلة من LocalStorage
+    document.addEventListener("DOMContentLoaded", () => {
+    const summaryItems = document.getElementById("summaryItems");
+    const summaryTotal = document.getElementById("summaryTotal");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        summaryItems.innerHTML = "<p>السلة فارغة 🕯️</p>";
+        return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+        summaryItems.innerHTML += `
+        <div class="summary-item">
+            <span>${item.name} × ${item.quantity}</span>
+            <span dir="ltr">$${(item.price * item.quantity).toFixed(2)}</span>
+        </div>`;
+    });
+    summaryTotal.textContent = "الإجمالي: $" + total.toFixed(2);
+    });
+
+// 💳 عند تأكيد الطلب
+document.getElementById("checkoutForm").addEventListener("submit", e => {
+    e.preventDefault();
+    localStorage.removeItem("cart"); // تفريغ السلة بعد الدفع
+    window.location.href = "thankyou.html"; // ✅ التحويل مباشرة لصفحة الشكر
+});
+
+    </script>
+    </body>
+    </html>

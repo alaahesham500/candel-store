@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🛒 سلة المشتريات | متجر الشموع</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+body { font-family: "Cairo", sans-serif; background-color: #fdfbfb; margin:0; direction: rtl; color:#444; }
+.cart-container { max-width: 900px; margin: 80px auto; background: #fff; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); padding: 30px; }
+h1 { text-align: center; color: #e48ca5; font-family: "Pacifico", cursive; margin-bottom: 30px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
+th { background-color: #ffe9ee; color: #444; }
+td img { width: 60px; border-radius: 10px; }
+.total { text-align: left; font-weight: bold; margin-top: 20px; font-size: 1.2em; color: #444; }
+.cart-buttons { text-align: center; margin-top: 25px; }
+.btn { background-color: #e48ca5; color: white; border: none; padding: 10px 25px; border-radius: 30px; cursor: pointer; transition: 0.3s; font-family: "Pacifico", cursive; font-size: 16px; }
+.btn:hover { background-color: #d96d8c; transform: scale(1.05); }
+.back-home { display: inline-flex; align-items: center; margin-top: 15px; text-decoration: none; color: #e48ca5; font-weight: bold; font-size: 16px; cursor: pointer; }
+.back-home:hover { color: #d96d8c; }
+.back-home i { margin-left: 5px; }
+.empty-cart { text-align: center; padding: 50px; font-size: 1.2em; color: #999; }
+.delete-btn { background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+.delete-btn:hover { background-color: #e60000; }
+input[type="number"] { width:50px; padding:5px; border-radius:5px; border:1px solid #ccc; text-align:center; }
+#couponCode { padding:8px; border-radius:5px; border:1px solid #ccc; }
+#discountMsg { color:#e48ca5; margin-top:5px; }
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background:#e48ca5; color:white; padding:10px 20px; border-radius:20px; opacity:0; pointer-events:none; transition:0.5s; font-family: "Cairo", sans-serif; }
+.toast.show { opacity:1; pointer-events:auto; }
+.checkout-btn {
+  background: linear-gradient(135deg, #e48ca5, #f5b6c4);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-family: "Pacifico", cursive;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.checkout-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f29db5, #ffbed1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.checkout-btn:active {
+  transform: scale(0.97);
+  background: linear-gradient(135deg, #d96d8c, #f29db5);
+}
+</style>
+</head>
+<body>
+
+<div class="cart-container">
+  <h1>🛒 سلة المشتريات</h1>
+  <div id="cartContent"><p class="empty-cart">سلتك فارغة حاليًا 🕯️</p></div>
+
+  <div style="margin: 20px 0;">
+    <input type="text" id="couponCode" placeholder="ادخل كود الخصم">
+    <button class="btn" id="applyCouponBtn">تطبيق الكود</button>
+    <p id="discountMsg"></p>
+  </div>
+
+  <div class="total" id="totalAmount">الإجمالي: $0</div>
+
+  <div class="cart-buttons">
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout 🕯️</button>
+    <button class="btn" id="clearCartBtn" style="background:#ff4d4d; margin-left:10px;">إفراغ السلة</button>
+    <a class="back-home" onclick="window.location.href='testt.html'; return false;">
+      <i class="fas fa-home"></i> العودة للصفحة الرئيسية
+    </a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cartContainer = document.getElementById("cartContent");
+  const totalAmount = document.getElementById("totalAmount");
+  const toast = document.getElementById("toast");
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let discountPercent = 0;
+
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(()=>toast.classList.remove("show"),2000);
+  }
+
+  function renderCart() {
+    if(cart.length === 0){
+      cartContainer.innerHTML = '<p class="empty-cart">سلتك فارغة حاليًا 🕯️</p>';
+      totalAmount.textContent = "الإجمالي: $0";
+      return;
+    }
+
+    let total = 0;
+    let tableHTML = '<table><tr><th>المنتج</th><th>السعر</th><th>الكمية</th><th>الإجمالي</th><th>حذف</th></tr>';
+
+    cart.forEach((item,index)=>{
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+      tableHTML += `
+        <tr>
+          <td>${item.name}</td>
+          <td dir="ltr">$${item.price}</td>
+          <td>
+            <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index}, this.value)">
+          </td>
+          <td dir="ltr">$${itemTotal}</td>
+          <td><button class="delete-btn" onclick="deleteItem(${index})"><i class="fas fa-trash"></i></button></td>
+        </tr>`;
+    });
+    tableHTML += '</table>';
+    cartContainer.innerHTML = tableHTML;
+
+    let totalAfterDiscount = total;
+    if(discountPercent > 0){
+      totalAfterDiscount = total - (total * discountPercent/100);
+    }
+    totalAmount.textContent = "الإجمالي: $" + totalAfterDiscount.toFixed(2);
+  }
+
+  window.deleteItem = function(index){
+    cart.splice(index,1);
+    localStorage.setItem("cart",JSON.stringify(cart));
+    renderCart();
+    showToast("تم حذف العنصر 🗑️");
+  };
+
+  window.updateQuantity = function(index,value){
+    const qty = parseInt(value);
+    if(qty < 1) return;
+    cart[index].quantity = qty;
+    localStorage.setItem("cart",JSON.stringify(cart));
+    renderCart();
+  };
+
+  document.getElementById("clearCartBtn").addEventListener("click",()=>{
+    cart = [];
+    localStorage.setItem("cart",JSON.stringify(cart));
+    renderCart();
+    showToast("تم إفراغ السلة 🕯️");
+  });
+
+  document.getElementById("applyCouponBtn").addEventListener("click",()=>{
+    const code = document.getElementById("couponCode").value.trim().toUpperCase();
+    const discountMsg = document.getElementById("discountMsg");
+    const coupons = { "CANDLE10":10, "LOVE20":20, "ROMANCE30":30 };
+    if(coupons[code]){
+      discountPercent = coupons[code];
+      discountMsg.textContent = `تم تطبيق الخصم ${discountPercent}%`;
+      showToast(`تم تطبيق الخصم ${discountPercent}%`);
+    } else {
+      discountPercent = 0;
+      discountMsg.textContent = "كود غير صالح";
+      showToast("كود غير صالح ❌");
+    }
+    renderCart();
+  });
+
+  // ✅ زر التحويل لصفحة الدفع
+  checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      showToast("سلتك فارغة 🕯️");
+      return;
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.href = "checkout.html";
+  });
+
+  renderCart();
+});
+</script>
+</body>
+</html>

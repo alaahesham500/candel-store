@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop - Candle Store</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img class="logo" src="imge/hero-image.jpg.png" alt="Candle Store Logo">
+    <nav class="header-links">
+        <a href="testt.html">Home</a>
+        <a href="testt.html#categories">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <button class="sign-in-btn" onclick="window.location.href='signin.html'">Sign In</button>
+
+        <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="wishlist-icon-container">
+            <i class="fa fa-heart" id="open-wishlist"></i>
+            <span class="wishlist-count">0</span>
+        </div>
+
+        <div class="cart-icon-container">
+            <a href="cart.html"><i class="fas fa-shopping-basket cart-icon"></i></a>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;"></section>
+<section class="shop-controls" data-aos="fade-up" style="text-align:center; margin: 20px 0;">
+<section class="shop-controls" data-aos="fade-up">
+    <section class="shop-controls" data-aos="fade-up"></section>
+    <!-- فلترة حسب النوع -->
+    <label for="filterCategory">Filter by Category:</label>
+    <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="Golden Glow">Golden Glow</option>
+        <option value="Marble Elegance">Marble Elegance</option>
+        <option value="Ocean Breeze Deco">Ocean Breeze Deco</option>
+        <option value="Classic Sculpture">Classic Sculpture</option>
+        <option value="Velvet Touch">Velvet Touch</option>
+        <option value="Minimal Pearl">Minimal Pearl</option>
+    </select>
+
+    <!-- ترتيب حسب السعر -->
+    <label for="sortPrice">Sort by Price:</label>
+    <select id="sortPrice">
+        <option value="none">None</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+
+    <!-- بحث بالاسم -->
+    <input type="text" id="searchInput" placeholder="Search product...">
+    </section>
+
+</section>
+<!-- PAGE TITLE -->
+<section class="categoryDetails" data-aos="fade-up">
+    <h1>Decorative Candles</h1>
+    <p>Add a touch of style to any space with our beautifully designed decorative candles.</p>
+</section>
+
+<!-- PRODUCTS GRID -->
+
+<!-- PRODUCTS GRID -->
+<section class="products-grid" data-aos="fade-up">
+    <div class="product-card" data-name="Marble Elegance" data-price="25">
+        <img src="imge/Marble Elegance.jpeg" alt="Marble Elegance">
+        <h3>Marble Elegance</h3>
+        <p class="product-description">
+            شمعة ديكورية بتصميم رخامي فاخر تضيف لمسة أنيقة إلى أي غرفة.  
+            طريقة الاستخدام: ضعها في غرفة المعيشة أو غرفة النوم لإضفاء جو دافئ وفخم.
+        </p>
+        <span class="product-price">$25</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Golden Glow" data-price="28">
+        <img src="imge/Golden Glow.jpeg" alt="Golden Glow">
+        <h3>Golden Glow</h3>
+        <p class="product-description">
+            شمعة بلون ذهبي معدني تضفي لمسة فخمة على طاولة الطعام أو الجلسات المسائية.
+        </p>
+        <span class="product-price">$28</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Minimal Pearl" data-price="22">
+        <img src="imge/Minimal Pearl.jpeg" alt="Minimal Pearl">
+        <h3>Minimal Pearl</h3>
+        <p class="product-description">
+            شمعة بسيطة بتصميم عصري بألوان محايدة، مثالية لمحبي الديكور الهادئ.
+        </p>
+        <span class="product-price">$22</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Classic Sculpture" data-price="30">
+        <img src="imge/Classic Sculpture.jpeg" alt="Classic Sculpture">
+        <h3>Classic Sculpture</h3>
+        <p class="product-description">
+            شمعة فنية بشكل تمثال كلاسيكي تضيف طابعًا فنيًا فريدًا لمساحتك.
+        </p>
+        <span class="product-price">$30</span>
+        <div class="product-buttons">
+            <button class="add-to-cart">🛒 Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+        </div>
+    </div>
+    <div class="product-card" data-name="Velvet Touch" data-price="32">
+    <img src="imge/Velvet Touch.jpeg" alt="Velvet Touch">
+    <h3>Velvet Touch</h3>
+    <p class="product-description">
+        شمعة فاخرة بلمسة مخملية وحاوية بلون خمري عميق.  
+        مثالية للأجواء الرومانسية أو جلسات العشاء الهادئة.
+    </p>
+    <span class="product-price">$32</span>
+    <div class="product-buttons">
+        <button class="add-to-cart">🛒 Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+    </div>
+</div>
+<div class="product-card" data-name="Ocean Breeze Deco" data-price="26">
+    <img src="imge/Ocean Breeze Deco.jpeg" alt="Ocean Breeze Deco">
+    <h3>Ocean Breeze Deco</h3>
+    <p class="product-description">
+        شمعة بتصميم مستوحى من البحر، بروائح منعشة وألوان فيروزية ناعمة.  
+        تضيف إحساسًا بالانتعاش والهدوء في أي غرفة.
+    </p>
+    <span class="product-price">$26</span>
+    <div class="product-buttons">
+        <button class="add-to-cart">🛒 Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+    </div>
+</div>
+
+</section>
+    <!-- Back to Home Button -->
+    <a href="testt.html" id="backHomeBtn" class="back-home-btn" title="Back to Home">
+    <i class="fas fa-home"></i>
+    </a>
+
+<!-- FOOTER -->
+<footer class="footerContainer">
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        <p>&copy; 2025 Candle Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Wishlist Panel -->
+<div id="wishlist-panel" class="wishlist-panel">
+    <h2>🩷 قائمة المفضلة</h2>
+    <div class="wishlist-actions">
+        <button id="clear-wishlist" class="clear-wishlist">🗑️ حذف الكل</button>
+    </div>
+    <div id="wishlist-items"></div>
+    <button id="close-wishlist" class="close-wishlist">إغلاق</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, mirror: false });
+</script>
+</body>
+</html>

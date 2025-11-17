@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - Candle Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <style>
+        body {
+        font-family: "Pacifico", cursive;
+        background-color: #fdfbfb;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(to bottom right, #ffe4ea, #f8d7da);
+        }
+
+        .signin-container {
+        background-color: #fff;
+        padding: 40px 50px;
+        border-radius: 25px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        transition: all 0.3s ease-in-out;
+        }
+
+        .signin-container:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .signin-container h1 {
+        color: #e57c96;
+        margin-bottom: 25px;
+        font-size: 32px;
+        }
+
+        .signin-container input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 2px solid #f8d7da;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        font-family: sans-serif;
+        transition: border-color 0.2s;
+        }
+
+        .signin-container input:focus {
+        border-color: #e57c96;
+        }
+
+        .signin-container button {
+        background-color: #e57c96;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .signin-container button:hover {
+        background-color: #ff9fb8;
+        transform: scale(1.03);
+        }
+
+        .signin-container p {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+        font-family: sans-serif;
+        }
+
+        .signin-container a {
+        color: #e57c96;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        .signin-container a:hover {
+        text-decoration: underline;
+        }
+
+        .back-home {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #e57c96;
+        font-size: 20px;
+        text-decoration: none;
+        }
+
+        .back-home:hover {
+        color: #ff9fb8;
+        }
+    </style>
+    </head>
+    <body>
+
+    <a href="testt.html" class="back-home"><i class="fas fa-home"></i> Home</a>
+
+    <div class="signin-container">
+        <h1>Sign In</h1>
+        <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+        <p>Don’t have an account? <a href="signup.html">Create one</a></p>
+        </form>
+    </div>
+    <script>
+    const form = document.querySelector("form");
+    const button = document.querySelector("button");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // إنشاء عنصر يمثل لهب الشمعة 🔥
+        const flame = document.createElement("div");
+        flame.innerHTML = "🕯️";
+        flame.style.position = "fixed";
+        flame.style.top = "50%";
+        flame.style.left = "50%";
+        flame.style.transform = "translate(-50%, -50%)";
+        flame.style.fontSize = "60px";
+        flame.style.opacity = "0";
+        flame.style.transition = "opacity 0.5s ease";
+        document.body.appendChild(flame);
+
+        // إظهار اللهب تدريجيًا
+        setTimeout(() => {
+        flame.style.opacity = "1";
+        }, 100);
+
+        // إخفاء اللهب بعد ثانية والانتقال للصفحة الرئيسية
+        setTimeout(() => {
+        flame.style.opacity = "0";
+        setTimeout(() => {
+            flame.remove();
+            window.location.href = "testt.html";
+        }, 400);
+        }, 1000);
+    });
+    </script>
+
+
+
+    </body>
+    </html>
